@@ -1,40 +1,42 @@
-Got it — since it's a **low-level, basic tool** and currently in **Alpha**, the README should reflect its **early-stage, experimental nature** with a focus on what it *can* do right now, rather than projecting too many polished features. Here's a simplified and honest version:
+Great — so it's also a **basic DNS manager with parental control functionality**. I'll update the README to reflect that clearly, while still keeping the tone grounded and appropriate for an **Alpha-stage, low-level tool**.
+
+Here’s the revised version:
 
 ---
 
 # PhoenixRoseMedia DNS Manager (Alpha)
 
-**PhoenixRoseMedia DNS Manager** is a lightweight, low-level DNS record manager currently in **Alpha**. It provides basic tools for editing and managing DNS zones and records via a local or CLI-based interface. This tool is intended for experimentation, testing, and foundational DNS automation work.
+**PhoenixRoseMedia DNS Manager** is a lightweight, low-level tool for managing DNS records with optional **parental control features**. Built for simplicity and local use, this alpha-stage utility allows you to configure DNS zones, edit records, and apply basic domain blocking for content filtering.
 
 ---
 
 ## ⚠️ Status: Alpha
 
-This is a work-in-progress and **not ready for production use**. Breaking changes and incomplete features should be expected. Use with caution and test thoroughly.
+This tool is in early development and **not production-ready**. Use it for testing, development, and experimentation. Expect bugs, minimal polish, and frequent changes.
 
 ---
 
-## ✨ Current Features
+## 🔑 Key Features (So Far)
 
-* Basic DNS zone file reading and writing
-* Simple add/update/remove support for A, CNAME, and TXT records
-* Local-only file operations (no network sync yet)
-* Minimal CLI interface for record manipulation
-* No external dependencies
+* ✏️ Basic DNS zone file editing (A, CNAME, TXT)
+* 🔍 CLI interface for record add/remove/list
+* 📵 Parental Controls: Block access to adult or undesired domains by adding DNS redirects
+* 💾 Local-only file operations (no upstream sync yet)
+* 🧱 No external dependencies, works offline
 
 ---
 
 ## 🛠️ Requirements
 
-* Python 3.10+ (or insert your language/runtime)
-* Basic understanding of DNS zone files
-* Linux/macOS recommended (Windows support not tested)
+* Python 3.10+ *(or insert actual language/runtime if different)*
+* UNIX-like environment (Linux/macOS preferred)
+* Basic understanding of DNS zones and Bind-style records
 
 ---
 
 ## 🚀 Getting Started
 
-### Clone the Repository
+### Clone the Repo
 
 ```bash
 git clone https://github.com/phoenixrosemedia/dns-manager.git
@@ -44,52 +46,56 @@ cd dns-manager
 ### Run the Manager
 
 ```bash
-python dns_manager.py  # or your entry script
+python dns_manager.py
 ```
 
-### Example Commands (Alpha)
+### Example Usage
 
 ```bash
-# Add a record
+# Add A record
 ./dns_manager.py add A example.com 192.0.2.1
 
-# Remove a record
-./dns_manager.py remove A example.com
+# Remove CNAME record
+./dns_manager.py remove CNAME www.example.com
 
-# View zone
-./dns_manager.py list example.com
+# Enable parental control mode
+./dns_manager.py block-list enable
+
+# Add domain to parental control list
+./dns_manager.py block add adultsite.com
 ```
 
 ---
 
-## 📦 Roadmap (Short Term)
+## 📦 Roadmap (Short-Term)
 
-* [ ] Add MX and NS record support
-* [ ] Validate zone file structure before write
-* [ ] CLI improvements and argument parsing
-* [ ] Zone reload/notify integration (Bind9-compatible)
-* [ ] Basic tests and logging
+* [ ] Support for MX, NS, and SRV records
+* [ ] Validate zone syntax before writing
+* [ ] Expand parental blocklist categories (e.g. gambling, violence)
+* [ ] Import/export parental blocklists
+* [ ] Basic DNS-over-HTTPS forwarding (optional)
 
 ---
 
-## 🤝 Contributing
+## 🧪 Contributing
 
-Right now, contributions are limited to bug reports and minimal patches. If you're testing this tool and want to share feedback, please open an issue or email support.
+Feedback, bug reports, and small patches are welcome during Alpha. Please open an issue or contact us by email.
 
 ---
 
 ## 📄 License
 
-MIT License — see `LICENSE` for details.
+MIT License — see `LICENSE` file.
 
 ---
 
 ## 📬 Contact
 
 PhoenixRoseMedia
-[support@phoenixrosemedia.com](mailto:support@phoenixrosemedia.com)
+✉️ [support@phoenixrosemedia.com](mailto:support@phoenixrosemedia.com)
+🌐 [https://www.phoenixrosemedia.com](https://www.phoenixrosemedia.com)
 
 ---
 
-Would you like a version of this with example output or a screenshot section added later on?
+Would you like help generating example zone files or CLI help output to include in the README or docs?
 
