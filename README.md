@@ -1,8 +1,3 @@
-Great — so it's also a **basic DNS manager with parental control functionality**. I'll update the README to reflect that clearly, while still keeping the tone grounded and appropriate for an **Alpha-stage, low-level tool**.
-
-Here’s the revised version:
-
----
 
 # PhoenixRoseMedia DNS Manager (Alpha)
 
@@ -95,7 +90,4 @@ PhoenixRoseMedia
 ✉️ [support@phoenixrosemedia.com](mailto:support@phoenixrosemedia.com)
 🌐 [https://www.phoenixrosemedia.com](https://www.phoenixrosemedia.com)
 
----
-
-Would you like help generating example zone files or CLI help output to include in the README or docs?
 
