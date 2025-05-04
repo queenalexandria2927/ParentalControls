@@ -24,7 +24,7 @@ This tool is in early development and **not production-ready**. Use it for testi
 ## 🛠️ Requirements
 
 * Python 3.10+ *(or insert actual language/runtime if different)*
-* UNIX-like environment (Linux/macOS preferred)
+* Run on Linux (Ubuntu,Debian,Arch) and also Windows (10/11)
 * Basic understanding of DNS zones and Bind-style records
 
 ---
