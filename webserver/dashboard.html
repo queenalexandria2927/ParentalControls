@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhoenixRoseDNS Manager - Dashboard</title>
+  <link rel="stylesheet" href="dashboard-styles.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header>
+      <h1>Welcome to PhoenixRoseDNS Manager</h1>
+      <p id="username-display">Hello, <span id="username">Admin</span></p>
+      <button id="logout-btn" onclick="logout()">Logout</button>
+    </header>
+    
+    <main>
+      <h2>Dashboard Overview</h2>
+      <p>This is your dashboard where you can manage DNS settings, users, and more.</p>
+
+      <div class="connectivity-check">
+        <button id="check-internet-btn" onclick="checkInternet()">Check Internet Connectivity</button>
+        <p id="connectivity-status"></p>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function logout() {
+      window.location.href = 'index.html';
+    }
+
+    function checkInternet() {
+      const status = document.getElementById("connectivity-status");
+      status.textContent = "Checking connectivity...";
+      
+      fetch("https://dns.google/", { mode: 'no-cors' })
+        .then(() => {
+          status.textContent = "Internet is online (response from 8.8.8.8).";
+          status.style.color = "green";
+        })
+        .catch(() => {
+          status.textContent = "No internet connection (cannot reach 8.8.8.8).";
+          status.style.color = "red";
+        });
+    }
+  </script>
+</body>
+</html>

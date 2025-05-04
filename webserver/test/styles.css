@@ -1,0 +1,38 @@
+/* Basic Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #4CAF50;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Footer styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    font-size: 14px;
+}
